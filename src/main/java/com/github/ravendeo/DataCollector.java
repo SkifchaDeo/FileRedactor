@@ -3,19 +3,33 @@ package com.github.ravendeo;
 import java.util.Scanner;
 
 public class DataCollector {
-    public String readFileName,writeFileName;
-    public String oldSubStr,newSubStr;
+    private String readFilePath;
+    private String writeFilePath;
+    private String oldSubStr;
+    private String newSubStr;
 
     public DataCollector(){
         Scanner consoleReader = new Scanner(System.in);
-        readFileName = consoleReader.next();
+        readFilePath = consoleReader.next();
         oldSubStr = consoleReader.next();
         newSubStr = consoleReader.next();
-        writeFileName = consoleReader.next();
+        writeFilePath = consoleReader.next();
         consoleReader.close();
-        //showData();
    }
-   public void showData(){
-       System.out.println(readFileName+" "+oldSubStr+" "+newSubStr+" "+writeFileName+" ");
-   }
+
+    public String getReadFilePath() {
+        return readFilePath;
+    }
+
+    public String getOldSubStr() {
+        return oldSubStr;
+    }
+
+    public String getNewSubStr() {
+        return newSubStr;
+    }
+
+    public String getWriteFilePath() {
+        return writeFilePath;
+    }
 }
