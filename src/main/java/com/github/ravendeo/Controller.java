@@ -10,8 +10,11 @@ import static java.nio.file.Files.readString;
 public class Controller {
     private String oldFileData;
     private String newFileData;
+    private DataCollector data;
 
-    private DataCollector data = new DataCollector();
+    public Controller(){
+        data = new DataCollector();
+    }
 
     public void readOldFile(){
         try {
